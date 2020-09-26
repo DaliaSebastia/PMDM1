@@ -13,6 +13,8 @@ fun main()
     exercise1()
     println("\nEXERCISE 2")
     exercise2()
+    println("\nEXERCISE 3")
+    exercise3()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -65,10 +67,22 @@ fun exercise2()
 }
 
 // TODO: 3 Write a function called exercise3()
-// that accepts a  number and returns a String
+// that accepts a number and returns a String
 // that represents the corresponding NIF (number + letter)
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
+
+fun exercise3()
+{
+    val char = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
+
+    println("Enter the number of the NIF (without letter):")
+    val num = readLine()
+
+    val aux = num!!.toInt()
+
+    println("Your DNI is: " + num + char[aux % 23])
+}
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
