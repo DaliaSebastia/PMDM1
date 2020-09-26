@@ -88,15 +88,10 @@ fun exercise3()
 // (simplification 2)
 // https://developer.android.com/kotlin/learn#simplifying
 // Note: You can remove the : Int in the declaration
-fun countAs(str: String): Int {
-    val count = str.count { c -> c == 'a' }
-    return count
-}
+fun countAs(str: String) = str.count { c -> c == 'a' }
 
+fun stringMapper(str: String, mapper: (String) -> Int) = mapper(str)
 
-fun stringMapper(str: String, mapper: (String) -> Int): Int {
-    return mapper(str)
-}
 // TODO 5: Write a function called exercise5()
 // In it you will invoke the function stringMapper declared above twice.
 // The first one with a function that returns the number of characters
