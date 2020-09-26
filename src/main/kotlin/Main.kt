@@ -129,10 +129,7 @@ fun assignReadersToBooks()
 
 fun printStringLength(string: String?)
 {
-    if (string == null)
-        println("The length of the not-string is 0")
-    else
-        println("The length of the string '" + string + "' is " + string.length)
+    println("The length of the string '" + string + "' is " + (string?.length ?: 0))
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
