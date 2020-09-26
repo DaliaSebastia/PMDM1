@@ -7,7 +7,7 @@ fun main()
     assignReadersToBooks()
     printStringLength("This is a test")
     printStringLength(null)
-    //println("Concatenation: " + concatenate("hello", null))
+    println("Concatenation: " + concatenate("hello", null))
 
     println("\nEXERCISE 1")
     exercise1()
@@ -125,10 +125,10 @@ fun assignReadersToBooks()
     book1.reader = reader2
 }
 
-
 // TODO 7: Write the body of this function
 // That prints the length of the string parameter.
 // If the string is null, print 0
+
 fun printStringLength(string: String?)
 {
     if (string == null)
@@ -142,3 +142,16 @@ fun printStringLength(string: String?)
 // If a String is null, convert it to “”.
 // This is the invocation:
 // println("Concatenation: " + concatenate("hello", null))
+
+fun concatenate (str1: String?, str2: String?): String
+{
+    var a = str1
+    var b = str2
+
+    if (str1 == null)
+        a = ""
+    if (str2 == null)
+        b = ""
+
+    return a + b
+}
