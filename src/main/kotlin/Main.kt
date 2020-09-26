@@ -140,13 +140,5 @@ fun printStringLength(string: String?)
 
 fun concatenate (str1: String?, str2: String?): String
 {
-    var a = str1
-    var b = str2
-
-    if (str1 == null)
-        a = ""
-    if (str2 == null)
-        b = ""
-
-    return a + b
+    return (str1 ?: "") + (str2 ?: "")
 }
