@@ -14,7 +14,10 @@ fun main()
     println("\nEXERCISE 2")
     exercise2()
     println("\nEXERCISE 3")
-    exercise3()
+    println("Enter the number of the NIF (without letter):")
+    val num: Int = readLine()?.toInt() ?: 0
+    println("Your DNI is: " + exercise3(num))
+
     println("\nEXERCISE 5")
     exercise5()
 }
@@ -74,16 +77,11 @@ fun exercise2()
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
-fun exercise3()
+fun exercise3(num: Int): String
 {
     val char = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
+    return "" + num + char[num % 23]
 
-    println("Enter the number of the NIF (without letter):")
-    val num = readLine()
-
-    val aux = num!!.toInt()
-
-    println("Your DNI is: " + num + char[aux % 23])
 }
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
