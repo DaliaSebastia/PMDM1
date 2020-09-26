@@ -15,6 +15,8 @@ fun main()
     exercise2()
     println("\nEXERCISE 3")
     exercise3()
+    println("\nEXERCISE 5")
+    exercise5()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -88,6 +90,7 @@ fun exercise3()
 // (simplification 2)
 // https://developer.android.com/kotlin/learn#simplifying
 // Note: You can remove the : Int in the declaration
+
 fun countAs(str: String) = str.count { c -> c == 'a' }
 
 fun stringMapper(str: String, mapper: (String) -> Int) = mapper(str)
@@ -98,6 +101,14 @@ fun stringMapper(str: String, mapper: (String) -> Int) = mapper(str)
 // and the second one with a function that returns the number of a’s.
 // Print its results.
 
+fun exercise5()
+{
+    println("number of characters in 'Caminas' = " + stringMapper("Caminas")
+    { input -> input.length })
+
+    println("number of a's in 'Caminas' = " + stringMapper("Caminas")
+    { countAs("Caminas") })
+}
 
 data class Reader(val name: String, val age: Int)
 // TODO 6: Create a data class Book that has 2 parameters
